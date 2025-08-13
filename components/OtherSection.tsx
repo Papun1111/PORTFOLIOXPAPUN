@@ -11,7 +11,7 @@ export default function OtherSection() {
         </h3>
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none"
+          className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-gray-200 dark:border-gray-800 shadow-xs dark:shadow-none"
         >
           <div className="flex items-start gap-3 sm:gap-4">
             <div className="text-2xl text-blue-600 dark:text-blue-400">
@@ -47,7 +47,7 @@ export default function OtherSection() {
                   Current CGPA
                 </span>
                 <div className="flex items-center gap-2">
-                  <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className="bg-linear-to-r from-green-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     8.75/10
                   </div>
                 </div>
@@ -61,7 +61,7 @@ export default function OtherSection() {
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                   <motion.div
-                    className="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full"
+                    className="bg-linear-to-r from-green-500 to-blue-500 h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: "87.5%" }}
                     transition={{ duration: 1, delay: 0.5 }}
@@ -73,18 +73,18 @@ export default function OtherSection() {
         </motion.div>
       </div>
 
-      <div className="space-y-3 sm:space-y-4">
+      <div className="space-y-3 space-x-1 sm:space-y-4">
         <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
           Friends
         </h3>
         <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
-          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-white shadow-sm dark:shadow-none">
+          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-white shadow-xs dark:shadow-none">
             Rishi Mandal
           </div>
           
         </motion.div>
          <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
-           <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-white shadow-sm dark:shadow-none">
+           <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-white shadow-xs dark:shadow-none">
             Naka
           </div>
           

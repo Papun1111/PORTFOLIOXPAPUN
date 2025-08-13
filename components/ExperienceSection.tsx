@@ -8,7 +8,7 @@ export default function ExperienceSection() {
       </h2>
       <motion.div
         whileHover={{ scale: 1.02 }}
-        className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none"
+        className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-gray-200 dark:border-gray-800 shadow-xs dark:shadow-none"
       >
         <div className="space-y-3 sm:space-y-4">
           <div>
