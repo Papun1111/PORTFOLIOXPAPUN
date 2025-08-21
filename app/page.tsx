@@ -1,6 +1,6 @@
 "use client";
 import Squares from "@/components/Squares";
-import { useState, useEffect } from "react";
+import { useState, useEffect, JSX } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MotionVariants } from "@/types";
 

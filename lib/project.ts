@@ -77,5 +77,15 @@ export const projects: Project[] = [
     icon: "",
     liveLink: "https://grindotts.vercel.app/",
     github: "https://github.com/Papun1111/Grindotts"
+  },  {
+    id: 8,
+    name: "MEET X",
+    description: "A full-stack Video Call Site",
+    status: "completed",
+    technologies: ["socker.io", "WebSockets", "JWT", "MongoDB", "Framer Motion","MERN"],
+    liveDemo: true,
+    icon: "",
+    liveLink: "https://meet-x-lemon.vercel.app/",
+    github: "https://github.com/Papun1111/MEET_X"
   }
 ];

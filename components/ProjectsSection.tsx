@@ -9,9 +9,9 @@ export default function ProjectsSection() {
       <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
         Projects
       </h2>
-      {projects.map((project) => (
+      {projects.map((project,index) => (
         <motion.div
-          key={project.id}
+          key={index}
           whileHover={{ scale: 1.02 }}
           className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-gray-200 dark:border-gray-800 shadow-xs dark:shadow-none"
         >
