@@ -1,112 +1,194 @@
 import { ToolsData } from "@/types";
+import {
+  FaReact,
+  FaAngular,
+  FaJava,
+  FaPython,
+  FaDocker,
+  FaNodeJs,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiExpress,
+  SiSpringboot,
+  SiSpring,
+  SiMongodb,
+  SiPostgresql,
+  SiHibernate,
+  SiShadcnui,
+  SiPrisma,
+} from "react-icons/si";
 
 export const tools: ToolsData = {
   Frontend: [
     {
       name: "Next.js",
-      icon: "⚡",
-      color: "text-white",
+      icon: SiNextdotjs,
+      color: {
+        light: "text-black",
+        dark: "dark:text-white",
+      },
     },
     {
       name: "React",
-      icon: "⚛️",
-      color: "text-cyan-400",
+      icon: FaReact,
+      color: {
+        light: "text-cyan-500",
+        dark: "dark:text-cyan-300",
+      },
     },
     {
       name: "Angular",
-      icon: "🅰️",
-      color: "text-red-500",
+      icon: FaAngular,
+      color: {
+        light: "text-red-600",
+        dark: "dark:text-red-400",
+      },
     },
     {
       name: "TypeScript",
-      icon: "🔷",
-      color: "text-blue-500",
+      icon: SiTypescript,
+      color: {
+        light: "text-blue-600",
+        dark: "dark:text-blue-400",
+      },
     },
     {
       name: "JavaScript",
-      icon: "🟨",
-      color: "text-yellow-400",
+      icon: SiJavascript,
+      color: {
+        light: "text-yellow-500",
+        dark: "dark:text-yellow-300",
+      },
     },
     {
       name: "Tailwind CSS",
-      icon: "🎨",
-      color: "text-cyan-400",
+      icon: SiTailwindcss,
+      color: {
+        light: "text-cyan-600",
+        dark: "dark:text-cyan-400",
+      },
     },
     {
       name: "Shadcn UI",
-      icon: "🎭",
-      color: "text-purple-400",
+      icon: SiShadcnui,
+      color: {
+        light: "text-purple-500",
+        dark: "dark:text-purple-300",
+      },
     },
   ],
 
   "Backend & Infrastructure": [
     {
       name: "Node.js",
-      icon: "🟢",
-      color: "text-green-500",
+      icon: FaNodeJs,
+      color: {
+        light: "text-green-600",
+        dark: "dark:text-green-400",
+      },
     },
     {
       name: "Express",
-      icon: "🚀",
-      color: "text-gray-300",
+      icon: SiExpress,
+      color: {
+        light: "text-gray-700",
+        dark: "dark:text-gray-300",
+      },
     },
     {
       name: "Java",
-      icon: "☕",
-      color: "text-red-400",
+      icon: FaJava,
+      color: {
+        light: "text-red-600",
+        dark: "dark:text-red-400",
+      },
     },
     {
       name: "Spring Boot",
-      icon: "🍃",
-      color: "text-green-400",
+      icon: SiSpringboot,
+      color: {
+        light: "text-green-500",
+        dark: "dark:text-green-300",
+      },
     },
     {
       name: "Spring",
-      icon: "🌱",
-      color: "text-green-500",
+      icon: SiSpring,
+      color: {
+        light: "text-green-600",
+        dark: "dark:text-green-400",
+      },
     },
     {
       name: "Python",
-      icon: "🐍",
-      color: "text-yellow-400",
+      icon: FaPython,
+      color: {
+        light: "text-yellow-500",
+        dark: "dark:text-yellow-300",
+      },
     },
     {
       name: "Docker",
-      icon: "🐳",
-      color: "text-blue-400",
+      icon: FaDocker,
+      color: {
+        light: "text-blue-500",
+        dark: "dark:text-blue-300",
+      },
     },
     {
       name: "TypeScript",
-      icon: "🔷",
-      color: "text-blue-500",
+      icon: SiTypescript,
+      color: {
+        light: "text-blue-600",
+        dark: "dark:text-blue-400",
+      },
     },
     {
       name: "JavaScript",
-      icon: "🟨",
-      color: "text-yellow-400",
+      icon: SiJavascript,
+      color: {
+        light: "text-yellow-500",
+        dark: "dark:text-yellow-300",
+      },
     },
   ],
 
   "Database & ORM": [
     {
       name: "MongoDB",
-      icon: "🍃",
-      color: "text-green-500",
+      icon: SiMongodb,
+      color: {
+        light: "text-green-600",
+        dark: "dark:text-green-400",
+      },
     },
     {
       name: "PostgreSQL",
-      icon: "🐘",
-      color: "text-blue-400",
+      icon: SiPostgresql,
+      color: {
+        light: "text-blue-600",
+        dark: "dark:text-blue-400",
+      },
     },
     {
       name: "Prisma",
-      icon: "💎",
-      color: "text-purple-400",
+      icon: SiPrisma,
+      color: {
+        light: "text-purple-500",
+        dark: "dark:text-purple-300",
+      },
     },
     {
       name: "Hibernate",
-      icon: "🐻",
-      color: "text-orange-400",
+      icon: SiHibernate,
+      color: {
+        light: "text-orange-500",
+        dark: "dark:text-orange-300",
+      },
     },
   ],
 };
