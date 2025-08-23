@@ -4,7 +4,7 @@ import { useState, useEffect, JSX } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MotionVariants } from "@/types";
 
-// Import all section components
+
 import Header from "@/components/Header";
 import Navigation, { TabType } from "@/components/Navigation";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -12,24 +12,33 @@ import ToolsSection from "@/components/ToolsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import OtherSection from "@/components/OtherSection";
 import Footer from "@/components/Footer";
+import DotGrid from "@/components/ui/DotGrid";
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState<TabType>("Projects");
   const [mounted, setMounted] = useState<boolean>(false);
+  const [darkMode,setDarkMode]=useState<boolean>(false);
+useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    setDarkMode(true);
+    document.documentElement.classList.add("dark");
+  } else {
+    setDarkMode(false);
+    document.documentElement.classList.remove("dark");
+  }
+  setMounted(true);
+}, []);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
-  // Function to toggle dark mode by adding/removing 'dark' class
-  const toggleDarkMode = () => {
-    document.documentElement.classList.toggle('dark');
-  };
+const toggleDarkMode = () => {
+  const newTheme = !darkMode ? "dark" : "light";
+  setDarkMode(!darkMode);
+  localStorage.setItem("theme", newTheme);
+  document.documentElement.classList.toggle("dark", newTheme === "dark");
+};
+  
 
-  // Check if dark mode is currently active
-  const isDarkMode = () => {
-    return document.documentElement.classList.contains('dark');
-  };
 
   if (!mounted) return null;
 
@@ -87,13 +96,17 @@ export default function Portfolio() {
     <div className="min-h-screen transition-colors duration-300 relative overflow-hidden bg-white text-black dark:bg-black dark:text-white">
       {/* Background Squares */}
       <div className="absolute inset-0 w-full h-full min-h-full z-0">
-        <Squares
-          speed={0.5}
-          squareSize={40}
-          direction="diagonal"
-          borderColor="cyan"
-          hoverFillColor="#222"
-        />
+        <DotGrid
+    dotSize={2}
+    gap={20}
+    baseColor={darkMode?"#9929EA":"#5227FF"}
+    activeColor="#5227FF"
+    proximity={120}
+    shockRadius={250}
+    shockStrength={5}
+    resistance={750}
+    returnDuration={1.5}
+  />
       </div>
 
       {/* Main Content */}
@@ -107,8 +120,8 @@ export default function Portfolio() {
           {/* Header */}
           <Header
             toggleDarkMode={toggleDarkMode}
-            isDarkMode={isDarkMode}
             itemVariants={itemVariants}
+            darkMode={darkMode}
           />
 
           {/* Navigation */}

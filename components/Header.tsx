@@ -5,11 +5,11 @@ import { MotionVariants } from "@/types";
 
 interface HeaderProps {
   toggleDarkMode: () => void;
-  isDarkMode: () => boolean;
   itemVariants: MotionVariants;
+  darkMode:boolean
 }
 
-export default function Header({ toggleDarkMode, isDarkMode, itemVariants }: HeaderProps) {
+export default function Header({ toggleDarkMode, itemVariants,darkMode }: HeaderProps) {
   return (
     <motion.div 
       variants={itemVariants} 
@@ -32,7 +32,7 @@ export default function Header({ toggleDarkMode, isDarkMode, itemVariants }: Hea
           onClick={toggleDarkMode}
           className="p-2 bg-blue-100 dark:bg-purple-800 hover:bg-blue-200 dark:hover:bg-purple-700 text-blue-800 dark:text-purple-200 border border-blue-300 dark:border-purple-600"
         >
-          {isDarkMode() ? (
+          {darkMode ? (
             <Sun className="w-4 h-4 text-orange-500" />
           ) : (
             <Moon className="w-4 h-4 text-indigo-600" />
