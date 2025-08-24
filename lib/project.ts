@@ -1,4 +1,8 @@
 import { Project } from "@/types";
+import { FaPaintBrush, FaYoutube, FaHospitalUser, FaUsers, FaUtensils, FaUserShield, FaChartLine, FaVideo } from "react-icons/fa";
+import { SiGooglemeet, SiReact, SiNextdotjs, SiMongodb, SiTailwindcss, SiTensorflow, SiWebrtc } from "react-icons/si";
+import { MdHealthAndSafety } from "react-icons/md";
+import { GiBank } from "react-icons/gi";
 
 export const projects: Project[] = [
   {
@@ -8,7 +12,7 @@ export const projects: Project[] = [
     status: "MVP (Modular, extensible)",
     technologies: ["Next.js", "WebSockets", "Collaboration", "Digital Canvas"],
     liveDemo: true,
-    icon: "",
+    icon: FaPaintBrush,
     liveLink: "https://canvas.valhalla-brush.com/",
     github: "https://github.com/Papun1111/Valhalla-brush"
   },
@@ -19,7 +23,7 @@ export const projects: Project[] = [
     status: "Alpha (Feature-rich, in early stage)",
     technologies: ["YouTube API", "Music App", "Next.js", "OAuth", "Live Voting"],
     liveDemo: true,
-    icon: "",
+    icon: FaYoutube,
     liveLink: "https://spot-tube-lime.vercel.app/",
     github: "https://github.com/Papun1111/SpotTube"
   },
@@ -30,7 +34,7 @@ export const projects: Project[] = [
     status: "Stable (Used in demo deployments)",
     technologies: ["Healthcare", "Admin Dashboard", "JWT", "Stripe", "Razorpay", "MongoDB"],
     liveDemo: true,
-    icon: "",
+    icon: MdHealthAndSafety,
     liveLink: "https://vitalson.onrender.com/",
     github: "https://github.com/Papun1111/VitalsOn"
   },
@@ -41,7 +45,7 @@ export const projects: Project[] = [
     status: "Beta (Ready for user testing)",
     technologies: ["React", "Tailwind", "JWT", "MongoDB", "Social App"],
     liveDemo: true,
-    icon: "",
+    icon: FaUsers,
     liveLink: "https://bluecourt.onrender.com",
     github: "https://github.com/Papun1111/BLUECOURT"
   },
@@ -52,7 +56,7 @@ export const projects: Project[] = [
     status: "Production-ready (Modular and scalable)",
     technologies: ["Full Stack", "React", "Node.js", "JWT", "Stripe", "Cloudinary", "Admin Panel", "MongoDB"],
     liveDemo: true,
-    icon: "",
+    icon: FaUtensils,
     liveLink: "https://pamotra-delivery.vercel.app/",
     github: "https://github.com/Papun1111/FoodDelivery"
   },
@@ -63,7 +67,7 @@ export const projects: Project[] = [
     status: "Stable (Admin module of larger ecosystem)",
     technologies: ["Admin Panel", "React", "Vite", "JWT", "Stripe", "Cloudinary", "Doctor Management"],
     liveDemo: true,
-    icon: "",
+    icon: FaUserShield,
     liveLink: "https://vitalspanel.onrender.com/",
     github: "https://github.com/Papun1111/VitalsOn"
   },
@@ -74,17 +78,18 @@ export const projects: Project[] = [
     status: "Experimental (AI + VR integrated)",
     technologies: ["Fintech", "TensorFlow.js", "WebSockets", "VR", "Trading Simulation", "JWT", "MongoDB", "Framer Motion", "Recharts", "React Three Fiber"],
     liveDemo: true,
-    icon: "",
+    icon: GiBank,
     liveLink: "https://grindotts.vercel.app/",
     github: "https://github.com/Papun1111/Grindotts"
-  },  {
+  },
+  {
     id: 8,
     name: "MEET X",
     description: "A full-stack Video Call Site",
     status: "completed",
-    technologies: ["socker.io", "WebSockets", "JWT", "MongoDB", "Framer Motion","MERN"],
+    technologies: ["socket.io", "WebSockets", "JWT", "MongoDB", "Framer Motion", "MERN"],
     liveDemo: true,
-    icon: "",
+    icon: FaVideo,
     liveLink: "https://meet-x-lemon.vercel.app/",
     github: "https://github.com/Papun1111/MEET_X"
   }

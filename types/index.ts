@@ -9,7 +9,7 @@ export interface Project {
   status: string;
   technologies: string[];
   liveDemo: boolean;
-  icon: string;
+  icon: string|IconType;
   liveLink:string,
   github:string
 }
