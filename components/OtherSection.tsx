@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { GraduationCap, Calendar, Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -5,18 +7,21 @@ import { Badge } from "@/components/ui/badge";
 export default function OtherSection() {
   return (
     <div className="space-y-6 sm:space-y-8">
+      {/* Education */}
       <div className="space-y-3 sm:space-y-4">
         <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
           Education
         </h3>
+
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-gray-200 dark:border-gray-800 shadow-xs dark:shadow-none"
+          className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-cyan-200 dark:border-cyan-800 shadow-sm"
         >
           <div className="flex items-start gap-3 sm:gap-4">
-            <div className="text-2xl text-blue-600 dark:text-blue-400">
+            <div className="text-2xl text-gray-700 dark:text-gray-300">
               <GraduationCap className="w-6 h-6" />
             </div>
+
             <div className="flex-1 space-y-3">
               <div className="flex items-center gap-2 mb-2">
                 <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white">
@@ -24,18 +29,18 @@ export default function OtherSection() {
                 </h4>
                 <Badge
                   variant="secondary"
-                  className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs border-blue-200 dark:border-blue-800"
+                  className="bg-cyan-50 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-300 text-xs border border-cyan-200 dark:border-cyan-800"
                 >
                   Final Year
                 </Badge>
               </div>
-              
+
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                   <Award className="w-4 h-4" />
-                  <span>Bachelor's in Computer Science</span>
+                  <span>Bachelor&apos;s in Computer Science</span>
                 </div>
-                
+
                 <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                   <Calendar className="w-4 h-4" />
                   <span>2022 - Present</span>
@@ -47,7 +52,7 @@ export default function OtherSection() {
                   Current CGPA
                 </span>
                 <div className="flex items-center gap-2">
-                  <div className="bg-linear-to-r from-green-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     8.75/10
                   </div>
                 </div>
@@ -59,9 +64,9 @@ export default function OtherSection() {
                   <span>Academic Progress</span>
                   <span>87.5%</span>
                 </div>
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
                   <motion.div
-                    className="bg-linear-to-r from-green-500 to-blue-500 h-2 rounded-full"
+                    className="bg-gradient-to-r from-purple-600 to-purple-500 dark:from-purple-400 dark:to-purple-300 h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: "87.5%" }}
                     transition={{ duration: 1, delay: 0.5 }}
@@ -73,23 +78,24 @@ export default function OtherSection() {
         </motion.div>
       </div>
 
-      <div className="space-y-3 space-x-1 sm:space-y-4">
+      {/* Friends */}
+      <div className="space-y-3 sm:space-y-4">
         <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
           Friends
         </h3>
-        <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
-          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-white shadow-xs dark:shadow-none">
-            Rishi Mandal
-          </div>
-          
-        </motion.div>
-         <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
-           <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-white shadow-xs dark:shadow-none">
-            Naka
-          </div>
-          
-        </motion.div>
-         
+        <div className="flex flex-wrap gap-2">
+          <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
+            <div className="bg-white dark:bg-gray-900 border border-cyan-200 dark:border-cyan-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-gray-100 shadow-sm">
+              Rishi Mandal
+            </div>
+          </motion.div>
+
+          <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
+            <div className="bg-white dark:bg-gray-900 border border-cyan-200 dark:border-cyan-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-gray-100 shadow-sm">
+              Naka
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
