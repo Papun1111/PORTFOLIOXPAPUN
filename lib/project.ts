@@ -1,5 +1,6 @@
 import { Project } from "@/types";
-import { FaPaintBrush, FaYoutube, FaHospitalUser, FaUsers, FaUtensils, FaUserShield, FaChartLine, FaVideo } from "react-icons/fa";
+import { FaPaintBrush, FaYoutube, FaHospitalUser, FaUsers, FaUtensils, FaUserShield, FaChartLine, FaVideo, FaBrain } from "react-icons/fa";
+import { MdOutlineSportsCricket } from "react-icons/md";
 import { SiGooglemeet, SiReact, SiNextdotjs, SiMongodb, SiTailwindcss, SiTensorflow, SiWebrtc } from "react-icons/si";
 import { MdHealthAndSafety } from "react-icons/md";
 import { GiBank } from "react-icons/gi";
@@ -18,14 +19,14 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    name: "Spottube",
+    name: "Sound-lab",
     description: "A YouTube-powered music player where creators stream tracks and fans vote in real-time to decide what plays next. Tailored for livestreams, group study, or parties.",
     status: "Alpha (Feature-rich, in early stage)",
-    technologies: ["YouTube API", "Music App", "Next.js", "OAuth", "Live Voting"],
+    technologies: ["YouTube API", "Music App", "Next.js", "Custom Auth", "Live Voting"],
     liveDemo: true,
     icon: FaYoutube,
-    liveLink: "https://spot-tube-lime.vercel.app/",
-    github: "https://github.com/Papun1111/SpotTube"
+    liveLink: "https://sound-lab-zeta.vercel.app/",
+    github: "https://github.com/Papun1111/Sound-Lab"
   },
   {
     id: 3,
@@ -85,12 +86,34 @@ export const projects: Project[] = [
   {
     id: 8,
     name: "MEET X",
-    description: "A full-stack Video Call Site",
-    status: "completed",
-    technologies: ["socket.io", "WebSockets", "JWT", "MongoDB", "Framer Motion", "MERN"],
+    description: "A full-stack video conferencing solution built with MERN stack and WebSockets. Users can initiate or join calls securely using JWT. Ideal for remote teams or personal meetups.",
+    status: "Completed",
+    technologies: ["Socket.IO", "WebSockets", "JWT", "MongoDB", "Framer Motion", "MERN"],
     liveDemo: true,
     icon: FaVideo,
     liveLink: "https://meet-x-lemon.vercel.app/",
     github: "https://github.com/Papun1111/MEET_X"
+  },
+  {
+    id: 9,
+    name: "Say My Brain",
+    description: "A second-brain productivity tool that lets users save tweets, websites, and tags they come across but can’t process immediately. With AI integration, users can later query their saved content and find insights fast.",
+    status: "Completed",
+    technologies: ["Next.js", "Gemini AI Integration", "Postgresql", "Bookmark Manager", "AI Assistant","Prisma"],
+    liveDemo: true,
+    icon: FaBrain,
+    liveLink: "https://say-my-brain.vercel.app/",
+    github: "https://github.com/Papun1111/Say_My_Brain"
+  },
+  {
+    id: 10,
+    name: "Kangaroo Code",
+    description: "A community-first cricket organisation platform where users can create teams, schedule and manage matches, update live scorecards, and track toss and results. All-in-one for amateur and local cricket groups.",
+    status: "Completed",
+    technologies: ["Next.js", "Postgresql", "TailwindCSS", "Cricket Score Management", "Team Coordination"],
+    liveDemo: true,
+    icon: MdOutlineSportsCricket,
+    liveLink: "https://kangaroo-code.vercel.app/",
+    github: "https://github.com/Papun1111/Kangaroo_Code"
   }
 ];
