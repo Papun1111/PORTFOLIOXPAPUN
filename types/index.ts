@@ -24,6 +24,7 @@ export interface ToolsData {
   Frontend: Tools[];
   "Backend & Infrastructure": Tools[];
   "Database & ORM": Tools[];
+   "Web3 & Blockchain":Tools[];
 }
 
 export interface Tools {

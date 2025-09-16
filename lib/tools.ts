@@ -20,6 +20,11 @@ import {
   SiHibernate,
   SiShadcnui,
   SiPrisma,
+  SiKubernetes, // Added
+  SiFastapi,    // Added
+  SiSolidity,   // Added
+  SiSolana,     // Added
+  SiEthereum,   // Added
 } from "react-icons/si";
 
 export const tools: ToolsData = {
@@ -132,11 +137,27 @@ export const tools: ToolsData = {
       },
     },
     {
+      name: "FastAPI", // Added
+      icon: SiFastapi,
+      color: {
+        light: "text-teal-500",
+        dark: "dark:text-teal-300",
+      },
+    },
+    {
       name: "Docker",
       icon: FaDocker,
       color: {
         light: "text-blue-500",
         dark: "dark:text-blue-300",
+      },
+    },
+    {
+      name: "Kubernetes", // Added
+      icon: SiKubernetes,
+      color: {
+        light: "text-blue-600",
+        dark: "dark:text-blue-400",
       },
     },
     {
@@ -188,6 +209,34 @@ export const tools: ToolsData = {
       color: {
         light: "text-orange-500",
         dark: "dark:text-orange-300",
+      },
+    },
+  ],
+
+  // Added new category for Web3
+  "Web3 & Blockchain": [
+    {
+      name: "Solidity",
+      icon: SiSolidity,
+      color: {
+        light: "text-gray-700",
+        dark: "dark:text-gray-300",
+      },
+    },
+    {
+      name: "Ethereum",
+      icon: SiEthereum,
+      color: {
+        light: "text-blue-700",
+        dark: "dark:text-blue-500",
+      },
+    },
+    {
+      name: "Solana",
+      icon: SiSolana,
+      color: {
+        light: "text-purple-600",
+        dark: "dark:text-purple-400",
       },
     },
   ],
