@@ -20,11 +20,11 @@ import {
   SiHibernate,
   SiShadcnui,
   SiPrisma,
-  SiKubernetes, // Added
-  SiFastapi,    // Added
-  SiSolidity,   // Added
-  SiSolana,     // Added
-  SiEthereum,   // Added
+  SiKubernetes, 
+  SiFastapi,    
+  SiSolidity,   
+  SiSolana,     
+  SiEthereum,   
 } from "react-icons/si";
 
 export const tools: ToolsData = {
