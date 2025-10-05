@@ -4,7 +4,6 @@ import { useState, useEffect, JSX } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MotionVariants } from "@/types";
 
-
 import Header from "@/components/Header";
 import Navigation, { TabType } from "@/components/Navigation";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -17,28 +16,26 @@ import DotGrid from "@/components/ui/DotGrid";
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState<TabType>("Projects");
   const [mounted, setMounted] = useState<boolean>(false);
-  const [darkMode,setDarkMode]=useState<boolean>(false);
-useEffect(() => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    setDarkMode(true);
-    document.documentElement.classList.add("dark");
-  } else {
-    setDarkMode(false);
-    document.documentElement.classList.remove("dark");
-  }
-  setMounted(true);
-}, []);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
+    } else {
+      setDarkMode(false);
+      document.documentElement.classList.remove("dark");
+    }
+    setMounted(true);
+  }, []);
 
-const toggleDarkMode = () => {
-  const newTheme = !darkMode ? "dark" : "light";
-  setDarkMode(!darkMode);
-  localStorage.setItem("theme", newTheme);
-  document.documentElement.classList.toggle("dark", newTheme === "dark");
-};
-  
-
+  const toggleDarkMode = () => {
+    const newTheme = !darkMode ? "dark" : "light";
+    setDarkMode(!darkMode);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+  };
 
   if (!mounted) return null;
 
@@ -93,20 +90,22 @@ const toggleDarkMode = () => {
   };
 
   return (
-    <div className="min-h-screen transition-colors duration-300 relative overflow-hidden bg-white text-black dark:bg-black dark:text-white">
-      {/* Background Squares */}
+    // UPDATED: Changed the background and text colors to a modern slate palette.
+    <div className="min-h-screen transition-colors duration-300 relative overflow-hidden bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-200">
+      {/* Background Grid */}
       <div className="absolute inset-0 w-full h-full min-h-full z-0">
+        {/* UPDATED: Changed the dot grid colors to a cool indigo accent. */}
         <DotGrid
-    dotSize={2}
-    gap={20}
-    baseColor={darkMode?"#9929EA":"#5227FF"}
-    activeColor="#5227FF"
-    proximity={120}
-    shockRadius={250}
-    shockStrength={5}
-    resistance={750}
-    returnDuration={1.5}
-  />
+          dotSize={2}
+          gap={20}
+          baseColor={darkMode ? "#4f46e5" : "#6366f1"} // Indigo shades for dark/light modes
+          activeColor="#818cf8" // A lighter indigo for the shockwave effect
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
       </div>
 
       {/* Main Content */}
