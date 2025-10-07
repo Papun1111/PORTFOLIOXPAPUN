@@ -43,7 +43,7 @@ export default function Header({ toggleDarkMode, itemVariants,darkMode }: Header
       <h1 className="text-xl sm:text-2xl font-bold text-blue-900 dark:text-purple-100">
         Hi, I'm Papun Mohapatra
       </h1>
-      <p className="text-blue-700 dark:text-purple-200 leading-relaxed text-sm sm:text-base max-w-md mx-auto">
+      <p className="bg-gradient-to-r from-blue-900 to-gray-900 bg-clip-text text-transparent dark:text-slate-300 leading-relaxed text-sm sm:text-base max-w-md mx-auto">
         I craft modern web applications with cutting-edge technologies,
         currently exploring the fascinating world of Web3 and decentralised
         applications.
