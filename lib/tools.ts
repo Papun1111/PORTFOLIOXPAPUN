@@ -24,7 +24,8 @@ import {
   SiFastapi,    
   SiSolidity,   
   SiSolana,     
-  SiEthereum,   
+  SiEthereum,
+  SiRust,   
 } from "react-icons/si";
 
 export const tools: ToolsData = {
@@ -237,6 +238,13 @@ export const tools: ToolsData = {
       color: {
         light: "text-purple-600",
         dark: "dark:text-purple-400",
+      },
+    },{
+      name: "Rust",
+      icon: SiRust,
+      color: {
+        light: "#CE422B",
+        dark: "dark:text-orange-400",
       },
     },
   ],
