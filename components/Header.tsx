@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
-import { Github, Twitter, Linkedin, Sun, Moon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+
 import { MotionVariants } from "@/types";
+import { GiSunPriest,GiNightSky } from "react-icons/gi";
 
 interface HeaderProps {
   toggleDarkMode: () => void;
   itemVariants: MotionVariants;
-  darkMode:boolean
+  darkMode: boolean;
 }
 
-export default function Header({ toggleDarkMode, itemVariants,darkMode }: HeaderProps) {
+export default function Header({ toggleDarkMode, itemVariants, darkMode }: HeaderProps) {
   return (
     <motion.div 
       variants={itemVariants} 
@@ -23,21 +24,33 @@ export default function Header({ toggleDarkMode, itemVariants,darkMode }: Header
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github className="w-5 h-5 text-blue-700 dark:text-purple-300 hover:text-blue-900 dark:hover:text-purple-100 hover:w-6 hover:h-6 transition-all duration-300" />
+            <FaGithub className="w-5 h-5 text-blue-700 dark:text-purple-300 hover:text-blue-900 dark:hover:text-purple-100 hover:w-6 hover:h-6 transition-all duration-300" />
           </a>
         </div>
-        <Button
-          variant="ghost"
-          size="sm"
+        
+        {/* Switch Toggle */}
+        <button
           onClick={toggleDarkMode}
-          className="p-2 bg-blue-100 dark:bg-purple-800 hover:bg-blue-200 dark:hover:bg-purple-700 text-blue-800 dark:text-purple-200 border border-blue-300 dark:border-purple-600"
+          className="relative w-16 h-8 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-purple-400 bg-gray-200 dark:bg-gray-700"
         >
-          {darkMode ? (
-            <Sun className="w-4 h-4 text-orange-500" />
-          ) : (
-            <Moon className="w-4 h-4 text-indigo-600" />
-          )}
-        </Button>
+          <motion.div
+            className="absolute top-1 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center"
+            animate={{
+              left: darkMode ? '36px' : '4px'
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 500,
+              damping: 30
+            }}
+          >
+            {darkMode ? (
+              <GiNightSky className="w-4 h-4 text-indigo-600" />
+            ) : (
+              <GiSunPriest className="w-4 h-4 text-orange-500" />
+            )}
+          </motion.div>
+        </button>
       </div>
 
       <h1 className="text-xl sm:text-2xl font-bold text-blue-900 dark:text-purple-100">
@@ -50,7 +63,6 @@ export default function Header({ toggleDarkMode, itemVariants,darkMode }: Header
       </p>
 
       <div className="flex items-center justify-center gap-4 sm:gap-6 pt-4">
-       
         <motion.a
           href="https://github.com/Papun1111"
           whileHover={{ scale: 1.1 }}
@@ -59,7 +71,7 @@ export default function Header({ toggleDarkMode, itemVariants,darkMode }: Header
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Github className="w-4 h-4" />
+          <FaGithub className="w-4 h-4" />
         </motion.a>
         <motion.a
           href="https://x.com/gotenseijuro"
@@ -69,7 +81,7 @@ export default function Header({ toggleDarkMode, itemVariants,darkMode }: Header
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Twitter className="w-4 h-4" />
+          <FaTwitter className="w-4 h-4" />
         </motion.a>
         <motion.a
           href="https://www.linkedin.com/in/papunm/"
@@ -79,7 +91,7 @@ export default function Header({ toggleDarkMode, itemVariants,darkMode }: Header
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Linkedin className="w-4 h-4" />
+          <FaLinkedin className="w-4 h-4" />
         </motion.a>
       </div>
     </motion.div>
