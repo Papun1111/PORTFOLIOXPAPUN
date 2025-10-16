@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 import { MotionVariants } from "@/types";
-import { GiSunPriest,GiNightSky } from "react-icons/gi";
+import { GiSunPriest, GiNightSky } from "react-icons/gi";
 
 interface HeaderProps {
-  toggleDarkMode: () => void;
+  toggleDarkMode: (e: React.MouseEvent) => void;
   itemVariants: MotionVariants;
   darkMode: boolean;
 }
@@ -31,7 +31,7 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
         {/* Switch Toggle */}
         <button
           onClick={toggleDarkMode}
-          className="relative w-16 h-8 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-purple-400 bg-gray-200 dark:bg-gray-700"
+          className="relative w-16 h-8 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-purple-400 bg-gray-200 dark:bg-gray-700 overflow-hidden"
         >
           <motion.div
             className="absolute top-1 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center"
@@ -44,11 +44,23 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
               damping: 30
             }}
           >
-            {darkMode ? (
-              <GiNightSky className="w-4 h-4 text-indigo-600" />
-            ) : (
-              <GiSunPriest className="w-4 h-4 text-orange-500" />
-            )}
+            <motion.div
+              initial={{ rotate: 0, scale: 1 }}
+              animate={{ 
+                rotate: darkMode ? 360 : 0,
+                scale: darkMode ? 1 : 1
+              }}
+              transition={{ 
+                rotate: { duration: 0.6, ease: "easeInOut" },
+                scale: { duration: 0.3 }
+              }}
+            >
+              {darkMode ? (
+                <GiNightSky className="w-4 h-4 text-indigo-600" />
+              ) : (
+                <GiSunPriest className="w-4 h-4 text-orange-500" />
+              )}
+            </motion.div>
           </motion.div>
         </button>
       </div>
