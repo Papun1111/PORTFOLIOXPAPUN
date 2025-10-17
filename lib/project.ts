@@ -45,7 +45,7 @@ export const projects: Project[] = [
     technologies: ["Healthcare", "Admin Dashboard", "JWT", "Stripe", "Razorpay", "MongoDB"],
     liveDemo: true,
     icon: MdHealthAndSafety,
-    liveLink: "https://vitalson.onrender.com/",
+    liveLink: "https://vitals-on.vercel.app",
     github: "https://github.com/Papun1111/VitalsOn"
   },
   {
