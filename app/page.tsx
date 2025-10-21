@@ -106,8 +106,9 @@ export default function Portfolio() {
         <DotGrid
           dotSize={2}
           gap={20}
-          baseColor={darkMode ? "#4f46e5" : "#6366f1"}
-          activeColor="#818cf8"
+          baseColor={darkMode ? "#a3e635" : "#a3e635"}
+          activeColor={darkMode ? "#d9f99d" : "black"}
+
           proximity={120}
           shockRadius={250}
           shockStrength={5}
