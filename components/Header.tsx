@@ -14,7 +14,7 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
   return (
     <motion.div 
       variants={itemVariants} 
-      className="text-center space-y-4 bg-blue-50 dark:bg-slate-900 p-6 rounded-lg border border-blue-200 dark:border-purple-800"
+      className="text-center space-y-4 bg-transparent dark:bg-slate-900 p-6 rounded-lg border border-blue-200 dark:border-[#a3e635]"
     >
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-4">
@@ -65,10 +65,10 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
         </button>
       </div>
 
-      <h1 className="text-xl sm:text-2xl font-bold text-blue-900 dark:text-purple-100">
+      <h1 className="text-xl sm:text-2xl font-bold text-blue-900 dark:text-[#C6E2E9]">
         Hi, I'm Papun Mohapatra
       </h1>
-      <p className="bg-gradient-to-r from-blue-900 to-gray-900 bg-clip-text text-transparent dark:text-slate-300 leading-relaxed text-sm sm:text-base max-w-md mx-auto">
+      <p className="bg-gradient-to-r from-blue-900 to-gray-900 bg-clip-text text-transparent dark:text-[#DAB894] leading-relaxed text-sm sm:text-base max-w-md mx-auto">
         I craft modern web applications with cutting-edge technologies,
         currently exploring the fascinating world of Web3 and decentralised
         applications.

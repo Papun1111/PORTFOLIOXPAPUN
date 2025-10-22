@@ -15,7 +15,7 @@ export default function OtherSection() {
 
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-cyan-200 dark:border-cyan-800 shadow-sm"
+          className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-cyan-200 dark:border-[#a3e635] shadow-sm"
         >
           <div className="flex items-start gap-3 sm:gap-4">
             <div className="text-2xl text-gray-700 dark:text-gray-300">
@@ -29,7 +29,7 @@ export default function OtherSection() {
                 </h4>
                 <Badge
                   variant="secondary"
-                  className="bg-cyan-50 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-300 text-xs border border-cyan-200 dark:border-cyan-800"
+                  className="bg-cyan-50 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-300 text-xs border border-cyan-200 dark:border-lime-600"
                 >
                   Final Year
                 </Badge>
@@ -66,7 +66,7 @@ export default function OtherSection() {
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
                   <motion.div
-                    className="bg-gradient-to-r from-purple-600 to-purple-500 dark:from-purple-400 dark:to-purple-300 h-2 rounded-full"
+                    className=" h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: "87.5%" }}
                     transition={{ duration: 1, delay: 0.5 }}

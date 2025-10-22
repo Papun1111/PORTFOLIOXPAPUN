@@ -21,7 +21,7 @@ export default function ToolsSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.08 }}
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className="flex flex-col items-center p-3 sm:p-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all shadow-xs dark:shadow-none"
+                  className="flex flex-col items-center p-3 sm:p-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 transition-all shadow-xs dark:shadow-none dark:hover:border-lime-400"
                 >
                   <div className="mb-2">
                     <Icon

@@ -62,7 +62,7 @@ export default function CustomCursor() {
       {/* Cursor ring with smooth delay */}
       <motion.div
         className="fixed w-12 h-12 rounded-full pointer-events-none z-[9998]
-          border-2 border-purple-400/50"
+          border-2 border-[#D9FF5C]"
         animate={{
           x: position.x - 24,
           y: position.y - 24,
@@ -81,7 +81,7 @@ export default function CustomCursor() {
       {/* Trailing glow effect */}
       <motion.div
         className="fixed w-8 h-8 rounded-full pointer-events-none z-[9997]
-          bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-xl"
+          bg-lime-500 blur-xl"
         animate={{
           x: position.x - 16,
           y: position.y - 16,
