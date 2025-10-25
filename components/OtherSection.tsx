@@ -29,7 +29,7 @@ export default function OtherSection() {
                 </h4>
                 <Badge
                   variant="secondary"
-                  className="bg-cyan-50 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-300 text-xs border border-cyan-200 dark:border-lime-600"
+                  className="bg-cyan-50 dark:bg-cyan-950 text-cyan-800 dark:text-gray-300 text-xs border border-cyan-200 dark:border-lime-600"
                 >
                   Final Year
                 </Badge>
@@ -85,13 +85,13 @@ export default function OtherSection() {
         </h3>
         <div className="flex flex-wrap gap-2">
           <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
-            <div className="bg-white dark:bg-gray-900 border border-cyan-200 dark:border-cyan-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-gray-100 shadow-sm">
+            <div className="bg-white dark:bg-gray-900 border border-cyan-200 dark:border-lime-500 rounded px-3 py-1 text-xs text-gray-700 dark:text-gray-100 shadow-sm">
               Rishi Mandal
             </div>
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
-            <div className="bg-white dark:bg-gray-900 border border-cyan-200 dark:border-cyan-800 rounded px-3 py-1 text-xs text-gray-700 dark:text-gray-100 shadow-sm">
+            <div className="bg-white dark:bg-gray-900 border border-cyan-200 dark:border-lime-500 rounded px-3 py-1 text-xs text-gray-700 dark:text-gray-100 shadow-sm">
               Naka
             </div>
           </motion.div>
