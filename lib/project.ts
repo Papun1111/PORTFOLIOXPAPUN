@@ -12,7 +12,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "WebSockets", "Collaboration", "NoteMaking", "Turborepo"],
     liveDemo: true,
     icon: FaPhoenixFramework,
-    liveLink: "https://pagesmith.valhalla-brush.com/",
+    liveLink: "https://papun.vercel.app/",
     github: "https://github.com/Papun1111/Pagesmith"
   },
   {
