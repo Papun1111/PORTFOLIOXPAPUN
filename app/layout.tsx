@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import './globals.css'
-import CustomCursor from '@/components/CustomCursor'
+
 export const metadata: Metadata = {
   title: 'Papun Mohapatra',
   description: 'Created By me',
@@ -22,7 +22,7 @@ export default function RootLayout({
 <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet"/>
       </head>
       <body>
-        <CustomCursor/>
+      
         {children}
         </body>
     </html>

@@ -5,83 +5,69 @@ import { projects } from "@/lib/project";
 
 export default function ProjectsSection() {
   return (
-    <div className="space-y-4 sm:space-y-6">
-      <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-white mb-8">
         Projects
       </h2>
-      {projects.map((project) => {
-        const Icon = project.icon as React.ComponentType | undefined;
-
-        return (
-          <motion.div
-            key={project.id}
-            whileHover={{ scale: 1.02 }}
-            className="bg-white dark:bg-gray-900 rounded-lg p-4 sm:p-6 border border-gray-200 dark:border-[#D9FF5C] shadow-xs dark:shadow-none"
-          >
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="text-xl sm:text-2xl">
-                {Icon ? <Icon /> : null}
-              </div>
-
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white">
-                    {project.name}
-                  </h3>
-                  <Badge
-                    variant="secondary"
-                    className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300 text-xs border-green-200 dark:border-#[D9FF5C]"
-                  >
-                    {project.status}
-                  </Badge>
-                </div>
-
-                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm sm:text-base">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                  {project.technologies.map((tech: string) => (
-                    <Badge
-                      key={tech}
-                      variant="outline"
-                      className="text-xs bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {projects.map((project) => {
+          return (
+            <motion.div
+              key={project.id}
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.2 }}
+              className="bg-[#1a1a1a] rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all duration-200"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <h3 className="text-lg font-semibold text-white">
+                  {project.name}
+                </h3>
+                <div className="flex items-center gap-2">
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1 }}
+                      className="text-gray-400 hover:text-white transition-colors"
                     >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-
-                <div className="flex items-center gap-4">
+                      <Github className="w-5 h-5" />
+                    </motion.a>
+                  )}
                   {project.liveDemo && (
                     <motion.a
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      className="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200"
+                      whileHover={{ scale: 1.1 }}
+                      className="text-gray-400 hover:text-white transition-colors"
                     >
-                      <ExternalLink className="w-3 h-3" />
-                      Live Demo
+                      <ExternalLink className="w-5 h-5" />
                     </motion.a>
                   )}
-
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200"
-                  >
-                    <Github className="w-3 h-3" />
-                    Source Code
-                  </motion.a>
                 </div>
               </div>
-            </div>
-          </motion.div>
-        );
-      })}
+
+              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                {project.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech: string) => (
+                  <Badge
+                    key={tech}
+                    variant="outline"
+                    className="text-xs px-3 py-1 bg-transparent text-[#D9FF5C] border-[#D9FF5C] hover:bg-[#D9FF5C] hover:text-black transition-colors duration-200"
+                  >
+                    {tech.toUpperCase()}
+                  </Badge>
+                ))}
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   );
 }

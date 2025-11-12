@@ -14,27 +14,18 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
   return (
     <motion.div 
       variants={itemVariants} 
-      className="text-center space-y-4 bg-transparent dark:bg-slate-900 p-6 rounded-lg border border-blue-200 dark:border-[#a3e635]"
+      className="text-center space-y-6 bg-white dark:bg-[#1a1a1a] p-8 rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none"
     >
       <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-4">
-          <a 
-            className="no-underline" 
-            href="https://github.com/Papun1111"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub className="w-5 h-5 text-blue-700 dark:text-purple-300 hover:text-blue-900 dark:hover:text-purple-100 hover:w-6 hover:h-6 transition-all duration-300" />
-          </a>
-        </div>
+        <div className="flex-1"></div>
         
         {/* Switch Toggle */}
         <button
           onClick={toggleDarkMode}
-          className="relative w-16 h-8 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-purple-400 bg-gray-200 dark:bg-gray-700 overflow-hidden"
+          className="relative w-16 h-8 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 bg-gray-200 dark:bg-gray-700 overflow-hidden"
         >
           <motion.div
-            className="absolute top-1 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center"
+            className="absolute top-1 w-6 h-6 bg-white dark:bg-[#D9FF5C] rounded-full shadow-md flex items-center justify-center"
             animate={{
               left: darkMode ? '36px' : '4px'
             }}
@@ -56,7 +47,7 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
               }}
             >
               {darkMode ? (
-                <GiNightSky className="w-4 h-4 text-indigo-600" />
+                <GiNightSky className="w-4 h-4 text-gray-900" />
               ) : (
                 <GiSunPriest className="w-4 h-4 text-orange-500" />
               )}
@@ -65,45 +56,45 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
         </button>
       </div>
 
-      <h1 className="text-xl sm:text-2xl font-bold text-blue-900 dark:text-[#C6E2E9]">
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
         Hi, I'm Papun Mohapatra
       </h1>
-      <p className="bg-gradient-to-r from-blue-900 to-gray-900 bg-clip-text text-transparent dark:text-[#DAB894] leading-relaxed text-sm sm:text-base max-w-md mx-auto">
+      <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base max-w-2xl mx-auto">
         I craft modern web applications with cutting-edge technologies,
         currently exploring the fascinating world of Web3 and decentralised
         applications.
       </p>
 
-      <div className="flex items-center justify-center gap-4 sm:gap-6 pt-4">
+      <div className="flex items-center justify-center gap-4 pt-4">
         <motion.a
           href="https://github.com/Papun1111"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.1, y: -2 }}
           whileTap={{ scale: 0.95 }}
-          className="p-2 bg-green-100 dark:bg-teal-800 text-green-700 dark:text-teal-200 hover:text-green-800 dark:hover:text-teal-100 hover:bg-green-200 dark:hover:bg-teal-700 transition-all duration-300 rounded-md border border-green-300 dark:border-teal-600"
+          className="p-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 shadow-sm"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub className="w-4 h-4" />
+          <FaGithub className="w-5 h-5" />
         </motion.a>
         <motion.a
           href="https://x.com/gotenseijuro"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.1, y: -2 }}
           whileTap={{ scale: 0.95 }}
-          className="p-2 bg-sky-100 dark:bg-indigo-800 text-sky-600 dark:text-indigo-200 hover:text-sky-700 dark:hover:text-indigo-100 hover:bg-sky-200 dark:hover:bg-indigo-700 transition-all duration-300 rounded-md border border-sky-300 dark:border-indigo-600"
+          className="p-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 shadow-sm"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTwitter className="w-4 h-4" />
+          <FaTwitter className="w-5 h-5" />
         </motion.a>
         <motion.a
           href="https://www.linkedin.com/in/papunm/"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.1, y: -2 }}
           whileTap={{ scale: 0.95 }}
-          className="p-2 bg-blue-100 dark:bg-violet-800 text-blue-600 dark:text-violet-200 hover:text-blue-700 dark:hover:text-violet-100 hover:bg-blue-200 dark:hover:bg-violet-700 transition-all duration-300 rounded-md border border-blue-300 dark:border-violet-600"
+          className="p-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-200 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 shadow-sm"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin className="w-4 h-4" />
+          <FaLinkedin className="w-5 h-5" />
         </motion.a>
       </div>
     </motion.div>

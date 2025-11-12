@@ -186,15 +186,6 @@
   font-weight: 500;
   font-style: normal;
   letter-spacing: normal;
-   cursor: none !important;
-}
-* {
- 
+  
 }
 
-/* Show default cursor on mobile/touch devices */
-@media (hover: none) and (pointer: coarse) {
-  * {
-    cursor: auto !important;
-  }
-}
