@@ -97,18 +97,17 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen transition-colors duration-300 relative overflow-hidden bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-200">
+    <div className="min-h-screen transition-colors duration-300 relative overflow-hidden bg-gray-50 dark:bg-black">
       {/* Dark Mode Transition Animation */}
       <DarkModeTransition isDark={darkMode} triggerPosition={triggerPosition} />
 
       {/* Background Grid */}
-      <div className="absolute inset-0 w-full h-full min-h-full z-0">
+      <div className="absolute inset-0 w-full h-full min-h-full z-0 opacity-40 dark:opacity-30">
         <DotGrid
           dotSize={2}
           gap={20}
-          baseColor={darkMode ? "#a3e635" : "#a3e635"}
-          activeColor={darkMode ? "#d9f99d" : "black"}
-
+          baseColor={darkMode ? "#D9FF5C" : "#9ca3af"}
+          activeColor={darkMode ? "#a3e635" : "#4b5563"}
           proximity={120}
           shockRadius={250}
           shockStrength={5}
@@ -118,12 +117,12 @@ export default function Portfolio() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-6 sm:space-y-8"
+          className="space-y-8"
         >
           {/* Header */}
           <Header
@@ -147,7 +146,7 @@ export default function Portfolio() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="space-y-4 sm:space-y-6"
+              className="min-h-[400px]"
             >
               {renderTabContent()}
             </motion.div>

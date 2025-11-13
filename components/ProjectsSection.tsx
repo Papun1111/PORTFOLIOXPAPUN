@@ -6,7 +6,7 @@ import { projects } from "@/lib/project";
 export default function ProjectsSection() {
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-white mb-8">
+      <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
         Projects
       </h2>
       
@@ -17,10 +17,10 @@ export default function ProjectsSection() {
               key={project.id}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2 }}
-              className="bg-[#1a1a1a] rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all duration-200"
+              className="bg-white dark:bg-[#1a1a1a] rounded-lg p-6 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-200 shadow-sm dark:shadow-none"
             >
               <div className="flex items-start justify-between mb-4">
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {project.name}
                 </h3>
                 <div className="flex items-center gap-2">
@@ -30,7 +30,7 @@ export default function ProjectsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                     >
                       <Github className="w-5 h-5" />
                     </motion.a>
@@ -41,7 +41,7 @@ export default function ProjectsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                     >
                       <ExternalLink className="w-5 h-5" />
                     </motion.a>
@@ -49,7 +49,7 @@ export default function ProjectsSection() {
                 </div>
               </div>
 
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
                 {project.description}
               </p>
 
@@ -58,7 +58,7 @@ export default function ProjectsSection() {
                   <Badge
                     key={tech}
                     variant="outline"
-                    className="text-xs px-3 py-1 bg-transparent text-[#D9FF5C] border-[#D9FF5C] hover:bg-[#D9FF5C] hover:text-black transition-colors duration-200"
+                    className="text-xs px-3 py-1 bg-transparent text-blue-900 dark:text-[#D9FF5C] border-[#D9FF5C] hover:bg-[#D9FF5C] hover:text-black transition-colors duration-200"
                   >
                     {tech.toUpperCase()}
                   </Badge>
