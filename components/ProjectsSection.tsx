@@ -58,7 +58,7 @@ export default function ProjectsSection() {
                   <Badge
                     key={tech}
                     variant="outline"
-                    className="text-xs px-3 py-1 bg-transparent text-blue-900 dark:text-[#D9FF5C] border-[#D9FF5C] hover:bg-[#D9FF5C] hover:text-black transition-colors duration-200"
+                    className="text-xs px-3 py-1 bg-transparent text-blue-900 dark:text-[#D9FF5C] border-[#D9FF5C] hover:bg-[#D9FF5C] dark:hover:bg-lime-500 dark:hover:text-black hover:text-black transition-colors duration-200"
                   >
                     {tech.toUpperCase()}
                   </Badge>

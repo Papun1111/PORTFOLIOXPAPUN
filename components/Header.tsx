@@ -31,7 +31,7 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
         {/* Switch Toggle */}
         <button
           onClick={toggleDarkMode}
-          className="relative w-16 h-8 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-purple-400 bg-gray-200 dark:bg-gray-700 overflow-hidden"
+          className="relative w-16 h-8 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-lime-500 bg-gray-200 dark:bg-gray-700 overflow-hidden"
         >
           <motion.div
             className="absolute top-1 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center"
@@ -79,7 +79,7 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
           href="https://github.com/Papun1111"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="p-2 bg-green-100 dark:bg-teal-800 text-green-700 dark:text-teal-200 hover:text-green-800 dark:hover:text-teal-100 hover:bg-green-200 dark:hover:bg-teal-700 transition-all duration-300 rounded-md border border-green-300 dark:border-teal-600"
+          className="p-2 bg-green-100 dark:hover:border-2 dark:hover:border-lime-400 dark:bg-teal-800 text-green-700 dark:text-teal-200 hover:text-green-800 dark:hover:text-teal-100 hover:bg-green-200 dark:hover:bg-teal-700 transition-all duration-300 rounded-md border border-green-300 dark:border-teal-600"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -89,7 +89,7 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
           href="https://x.com/gotenseijuro"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="p-2 bg-sky-100 dark:bg-indigo-800 text-sky-600 dark:text-indigo-200 hover:text-sky-700 dark:hover:text-indigo-100 hover:bg-sky-200 dark:hover:bg-indigo-700 transition-all duration-300 rounded-md border border-sky-300 dark:border-indigo-600"
+          className="p-2 bg-sky-100 dark:bg-indigo-800 dark:hover:border-2 dark:hover:border-lime-400 text-sky-600 dark:text-indigo-200 hover:text-sky-700 dark:hover:text-indigo-100 hover:bg-sky-200 dark:hover:bg-indigo-700 transition-all duration-300 rounded-md border border-sky-300 dark:border-indigo-600"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -99,7 +99,7 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
           href="https://www.linkedin.com/in/papunm/"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="p-2 bg-blue-100 dark:bg-violet-800 text-blue-600 dark:text-violet-200 hover:text-blue-700 dark:hover:text-violet-100 hover:bg-blue-200 dark:hover:bg-violet-700 transition-all duration-300 rounded-md border border-blue-300 dark:border-violet-600"
+          className="p-2 bg-blue-100 dark:hover:border-2 dark:hover:border-lime-400 dark:bg-violet-800 text-blue-600 dark:text-violet-200 hover:text-blue-700 dark:hover:text-violet-100 hover:bg-blue-200 dark:hover:bg-violet-700 transition-all duration-300 rounded-md border border-blue-300 dark:border-violet-600"
           target="_blank"
           rel="noopener noreferrer"
         >
