@@ -1,30 +1,29 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
 
-import './globals.css'
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Papun Mohapatra',
-  description: 'Created By me',
-  generator: 'Nextjs',
-}
+  title: "Papun Mohapatra",
+  description: "Created By me",
+  generator: "Nextjs",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <head>
-     
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body>
-      
-        {children}
-        </body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }
