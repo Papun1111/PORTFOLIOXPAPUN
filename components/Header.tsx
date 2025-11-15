@@ -56,9 +56,9 @@ export default function Header({ toggleDarkMode, itemVariants, darkMode }: Heade
               }}
             >
               {darkMode ? (
-                <GiNightSky className="w-4 h-4 text-lime-600" />
+                <GiNightSky className="w-4 h-4 text-lime-600 hover:cursor-pointer" />
               ) : (
-                <GiSunPriest className="w-4 h-4 text-orange-500" />
+                <GiSunPriest className="w-4 h-4 text-orange-500 hover:cursor-pointer" />
               )}
             </motion.div>
           </motion.div>
