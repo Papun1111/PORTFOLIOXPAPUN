@@ -25,7 +25,8 @@ import {
   SiSolidity,   
   SiSolana,     
   SiEthereum,
-  SiRust,   
+  SiRust,  
+  SiGo 
 } from "react-icons/si";
 
 export const tools: ToolsData = {
@@ -175,6 +176,14 @@ export const tools: ToolsData = {
       color: {
         light: "text-yellow-500",
         dark: "dark:text-yellow-300",
+      },
+    },
+     {
+      name: "Go Lang",
+      icon: SiGo,
+      color: {
+        light: "text-blue-600",
+        dark: "dark:text-blue-400",
       },
     },
   ],
