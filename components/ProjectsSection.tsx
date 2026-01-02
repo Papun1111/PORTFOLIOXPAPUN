@@ -6,67 +6,149 @@ import { projects } from "@/lib/project";
 export default function ProjectsSection() {
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-        Projects
+      {/* Section Title */}
+      <h2
+        className="
+          text-2xl
+          font-bold
+          tracking-wide
+          text-gray-900
+          dark:text-[#D9FF5C]
+          mb-8
+        "
+      >
+        PROJECTS
       </h2>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {projects.map((project) => {
-          return (
-            <motion.div
-              key={project.id}
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.2 }}
-              className="bg-white dark:bg-[#1a1a1a] rounded-lg p-6 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-200 shadow-sm dark:shadow-none"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {project.name}
-                </h3>
-                <div className="flex items-center gap-2">
-                  {project.github && (
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                    >
-                      <Github className="w-5 h-5" />
-                    </motion.a>
-                  )}
-                  {project.liveDemo && (
-                    <motion.a
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </motion.a>
-                  )}
-                </div>
-              </div>
+        {projects.map((project) => (
+          <motion.div
+            key={project.id}
+            whileHover={{
+              y: -6,
+              boxShadow:
+                "0 0 25px rgba(217, 255, 92, 0.25)",
+            }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="
+              rounded-xl
+              p-6
+              transition-all
+              duration-300
 
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
-                {project.description}
-              </p>
+              /* Light Mode */
+              bg-white
+              border border-gray-200
+              hover:border-[#D9FF5C]
 
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech: string) => (
-                  <Badge
-                    key={tech}
-                    variant="outline"
-                    className="text-xs px-3 py-1 bg-transparent text-blue-900 dark:text-[#D9FF5C] border-[#D9FF5C] hover:bg-[#D9FF5C] dark:hover:bg-lime-500 dark:hover:text-black hover:text-black transition-colors duration-200"
+              /* Dark Mode */
+              dark:bg-[#0B0F0A]
+              dark:border-[#1f2a1f]
+              dark:hover:border-[#D9FF5C]
+            "
+          >
+            {/* Header */}
+            <div className="flex items-start justify-between mb-4">
+              <h3
+                className="
+                  text-lg
+                  font-semibold
+                  tracking-wide
+                  text-gray-900
+                  dark:text-white
+                "
+              >
+                {project.name}
+              </h3>
+
+              <div className="flex items-center gap-3">
+                {project.github && (
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.15 }}
+                    className="
+                      text-gray-500
+                      hover:text-[#D9FF5C]
+                      dark:text-gray-400
+                      dark:hover:text-[#D9FF5C]
+                      transition-colors
+                    "
                   >
-                    {tech.toUpperCase()}
-                  </Badge>
-                ))}
+                    <Github className="w-5 h-5" />
+                  </motion.a>
+                )}
+
+                {project.liveDemo && (
+                  <motion.a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.15 }}
+                    className="
+                      text-gray-500
+                      hover:text-[#D9FF5C]
+                      dark:text-gray-400
+                      dark:hover:text-[#D9FF5C]
+                      transition-colors
+                    "
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </motion.a>
+                )}
               </div>
-            </motion.div>
-          );
-        })}
+            </div>
+
+            {/* Description */}
+            <p
+              className="
+                text-sm
+                leading-relaxed
+                mb-6
+                text-gray-600
+                dark:text-gray-400
+              "
+            >
+              {project.description}
+            </p>
+
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech: string) => (
+                <Badge
+                  key={tech}
+                  variant="outline"
+                  className="
+                    text-xs
+                    px-3
+                    py-1
+                    uppercase
+                    tracking-wider
+
+                    /* Light Mode */
+                    text-gray-900
+                    border-gray-300
+                    hover:border-[#D9FF5C]
+                    hover:text-black
+                    hover:bg-[#D9FF5C]
+
+                    /* Dark Mode */
+                    dark:text-[#D9FF5C]
+                    dark:border-[#D9FF5C]
+                    dark:hover:bg-[#D9FF5C]
+                    dark:hover:text-black
+
+                    transition-all
+                    duration-200
+                  "
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
